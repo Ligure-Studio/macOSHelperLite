@@ -31,7 +31,7 @@ struct ContentView: View {
             .listStyle(SidebarListStyle())
             .navigationTitle(LocalizedStringKey("MacOS Helper Lite"))
         } //NavigationView结束
-    } //body结束
+    } //View结束
 } //ContentView结束
 
 struct ContentView_Previews: PreviewProvider {

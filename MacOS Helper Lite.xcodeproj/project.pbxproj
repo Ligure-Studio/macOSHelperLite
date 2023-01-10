@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B48A5F0296D72160061B5FB /* MacOS-Helper-Lite-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MacOS-Helper-Lite-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4BC2F1C8296D64DF006E2197 /* MacOS Helper Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MacOS Helper Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC2F1CB296D64DF006E2197 /* MacOS_Helper_LiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOS_Helper_LiteApp.swift; sourceTree = "<group>"; };
 		4BC2F1CD296D64DF006E2197 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		4BC2F1CA296D64DF006E2197 /* MacOS Helper Lite */ = {
 			isa = PBXGroup;
 			children = (
+				4B48A5F0296D72160061B5FB /* MacOS-Helper-Lite-Info.plist */,
 				4BC2F1CB296D64DF006E2197 /* MacOS_Helper_LiteApp.swift */,
 				4BC2F1CD296D64DF006E2197 /* ContentView.swift */,
 				4BC2F1DC296D69B0006E2197 /* EnableAllSources.swift */,
@@ -282,11 +284,15 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MacOS-Helper-Lite-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MacOS小助手";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MingS.MacOS-Helper-Lite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,11 +315,15 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MacOS-Helper-Lite-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MacOS小助手";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MingS.MacOS-Helper-Lite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
