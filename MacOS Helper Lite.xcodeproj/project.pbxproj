@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B47DFAC296E863E0051E95B /* OtherFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B47DFAB296E863E0051E95B /* OtherFeatures.swift */; };
+		4B913C8B296EB54D00DA8605 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B913C8A296EB54D00DA8605 /* ContactUs.swift */; };
+		4B913C8D296EB9F200DA8605 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B913C8C296EB9F200DA8605 /* ButtonView.swift */; };
 		4BC2F1CC296D64DF006E2197 /* MacOS_Helper_LiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F1CB296D64DF006E2197 /* MacOS_Helper_LiteApp.swift */; };
 		4BC2F1CE296D64DF006E2197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F1CD296D64DF006E2197 /* ContentView.swift */; };
 		4BC2F1D0296D64E0006E2197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC2F1CF296D64E0006E2197 /* Assets.xcassets */; };
@@ -16,7 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B47DFAB296E863E0051E95B /* OtherFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFeatures.swift; sourceTree = "<group>"; };
 		4B48A5F0296D72160061B5FB /* MacOS-Helper-Lite-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MacOS-Helper-Lite-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4B913C8A296EB54D00DA8605 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
+		4B913C8C296EB9F200DA8605 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		4BC2F1C8296D64DF006E2197 /* MacOS Helper Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MacOS Helper Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC2F1CB296D64DF006E2197 /* MacOS_Helper_LiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOS_Helper_LiteApp.swift; sourceTree = "<group>"; };
 		4BC2F1CD296D64DF006E2197 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,8 +66,11 @@
 				4B48A5F0296D72160061B5FB /* MacOS-Helper-Lite-Info.plist */,
 				4BC2F1CB296D64DF006E2197 /* MacOS_Helper_LiteApp.swift */,
 				4BC2F1CD296D64DF006E2197 /* ContentView.swift */,
+				4B913C8A296EB54D00DA8605 /* ContactUs.swift */,
 				4BC2F1DC296D69B0006E2197 /* EnableAllSources.swift */,
 				4BC2F1DE296D6B84006E2197 /* DisableQuarantine.swift */,
+				4B47DFAB296E863E0051E95B /* OtherFeatures.swift */,
+				4B913C8C296EB9F200DA8605 /* ButtonView.swift */,
 				4BC2F1CF296D64E0006E2197 /* Assets.xcassets */,
 				4BC2F1D4296D64E0006E2197 /* MacOS_Helper_Lite.entitlements */,
 				4BC2F1D1296D64E0006E2197 /* Preview Content */,
@@ -147,10 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B47DFAC296E863E0051E95B /* OtherFeatures.swift in Sources */,
 				4BC2F1CE296D64DF006E2197 /* ContentView.swift in Sources */,
+				4B913C8B296EB54D00DA8605 /* ContactUs.swift in Sources */,
 				4BC2F1DD296D69B0006E2197 /* EnableAllSources.swift in Sources */,
 				4BC2F1DF296D6B84006E2197 /* DisableQuarantine.swift in Sources */,
 				4BC2F1CC296D64DF006E2197 /* MacOS_Helper_LiteApp.swift in Sources */,
+				4B913C8D296EB9F200DA8605 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +297,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MacOS-Helper-Lite-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "MacOS小助手";
+				INFOPLIST_KEY_CFBundleDisplayName = "MacOS小助手 By MingS";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -316,7 +328,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MacOS-Helper-Lite-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "MacOS小助手";
+				INFOPLIST_KEY_CFBundleDisplayName = "MacOS小助手 By MingS";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
