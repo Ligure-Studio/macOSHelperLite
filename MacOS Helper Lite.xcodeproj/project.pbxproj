@@ -17,6 +17,7 @@
 		4BC2F1DD296D69B0006E2197 /* EnableAllSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F1DC296D69B0006E2197 /* EnableAllSources.swift */; };
 		4BC2F1DF296D6B84006E2197 /* DisableQuarantine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F1DE296D6B84006E2197 /* DisableQuarantine.swift */; };
 		4BE1B456299797B70065F275 /* runScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1B455299797B60065F275 /* runScript.swift */; };
+		4BE1B4582997A1610065F275 /* test.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 4BE1B4572997A1610065F275 /* test.scpt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4BC2F1DC296D69B0006E2197 /* EnableAllSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableAllSources.swift; sourceTree = "<group>"; };
 		4BC2F1DE296D6B84006E2197 /* DisableQuarantine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableQuarantine.swift; sourceTree = "<group>"; };
 		4BE1B455299797B60065F275 /* runScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runScript.swift; sourceTree = "<group>"; };
+		4BE1B4572997A1610065F275 /* test.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.scpt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				4B47DFAB296E863E0051E95B /* OtherFeatures.swift */,
 				4BE1B455299797B60065F275 /* runScript.swift */,
 				4B913C8C296EB9F200DA8605 /* ButtonView.swift */,
+				4BE1B4572997A1610065F275 /* test.scpt */,
 				4BC2F1CF296D64E0006E2197 /* Assets.xcassets */,
 				4BC2F1D4296D64E0006E2197 /* MacOS_Helper_Lite.entitlements */,
 				4BC2F1D1296D64E0006E2197 /* Preview Content */,
@@ -149,6 +152,7 @@
 			files = (
 				4BC2F1D3296D64E0006E2197 /* Preview Assets.xcassets in Resources */,
 				4BC2F1D0296D64E0006E2197 /* Assets.xcassets in Resources */,
+				4BE1B4582997A1610065F275 /* test.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

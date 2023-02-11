@@ -26,7 +26,7 @@ struct EnableAllSources: View {
                     .font(.title2)
                     .padding(.bottom)
                 Button(action: {
-                    runScript(scPath: "/Users/fanchenjia/Developer/Ligure 开发组/MacOSHelperLite/test.scpt")
+                    runScript(scPath: "test.scpt")
                 }) {
                     Text("开启全部来源")
                 }
