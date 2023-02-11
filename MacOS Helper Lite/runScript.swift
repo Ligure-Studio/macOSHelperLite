@@ -7,10 +7,20 @@
 
 import Foundation
 
-public func runScript(scPath: String) {
-    //scPath 为路径变量
+public func runScript(_ command: String) -> String {
+    //
     let task = Process()
+    let pipe = Pipe()
+    
+    task.standardOutput = pipe
+    task.standardError = pipe
+    task.arguments = ["-e", command]
     task.launchPath = "/usr/bin/osascript"
-    task.arguments = [scPath]
+    task.standardInput = nil
     task.launch()
+    
+    let data = pipe.fileHandleForReading.readDataToEndOfFile()
+    let output = String(data: data, encoding: .utf8)!
+    
+    return output
 }
