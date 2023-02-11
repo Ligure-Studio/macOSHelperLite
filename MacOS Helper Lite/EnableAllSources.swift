@@ -26,9 +26,9 @@ struct EnableAllSources: View {
                     .font(.title2)
                     .padding(.bottom)
                 Button(action: {
-                    copyStringToPasteboard(string: "sudo spctl --master-disable")
+                    runScript(scPath: "/Users/fanchenjia/Developer/Ligure 开发组/MacOSHelperLite/test.scpt")
                 }) {
-                    Text("点我复制终端命令")
+                    Text("开启全部来源")
                 }
                 .buttonStyle(.plain)
                 .font(.title)

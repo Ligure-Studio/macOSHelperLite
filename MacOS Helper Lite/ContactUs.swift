@@ -10,7 +10,7 @@ import SwiftUI
 struct ContactUs: View {
     var body: some View {
         VStack {
-            Text("An Open Source Project By MingS")
+            Text("An Open Source Project By Ligure Studio")
                 .font(.system(size: 40).bold())
                 .gradientForeground(colors: [Color(red: 79/255.0, green: 147/255.0, blue: 248/255.0), Color.blue])
                 .padding()
@@ -28,11 +28,6 @@ struct ContactUs: View {
                 Text("访问官网")
                 Text("macapp.org.cn")
             }.font(.system(size: 15))
-            
-            Text("拒绝付费站点转载,拒绝马克喵转载")
-                .foregroundColor(.red)
-                .font(.system(size: 30).bold())
-                .padding()
         }
     }
 }
