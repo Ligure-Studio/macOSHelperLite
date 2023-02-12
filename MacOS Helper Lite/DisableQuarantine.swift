@@ -27,7 +27,7 @@ struct DisableQuarantine: View {
                     copyStringToPasteboard(string: "sudo xattr -r -d com.apple.quarantine")
                 }) {
                     Text("""
-解决“易损坏”问题
+解决“已损坏”问题
 """)
                 }
                 .buttonStyle(.plain)
