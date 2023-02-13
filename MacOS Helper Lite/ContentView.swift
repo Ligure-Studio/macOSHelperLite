@@ -89,14 +89,6 @@ extension View {
 
 //剪贴板函数结束===
 
-//脚本函数开始===
-public func RunScript() {
-    let task = Process()
-    task.launchPath = "/usr/bin/osascript"
-    task.arguments = ["~/Desktop/testscript.scpt"]
-}
-//脚本函数结束===
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

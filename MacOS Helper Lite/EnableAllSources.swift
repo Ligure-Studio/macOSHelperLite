@@ -27,6 +27,7 @@ struct EnableAllSources: View {
                     .padding(.bottom)
                 Button(action: {
                     runScript("do shell script \"sudo spctl --master-disable\" with administrator privileges")
+                    runScript("display alert \"已打开！\"")
                 }) {
                     Text("开启全部来源")
                 }

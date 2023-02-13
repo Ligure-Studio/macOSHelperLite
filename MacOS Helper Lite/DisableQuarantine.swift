@@ -20,11 +20,20 @@ struct DisableQuarantine: View {
                     .font(.title2)
                     .padding(.bottom,5)
                     .padding([.leading,.trailing])
-                Text("复制代码,粘贴入终端,输入一个空格,将无法运行的应用拖入终端")
+                Text("点击按钮,选择无法运行的应用")
                     .font(.title2)
                     .padding(.bottom)
                 Button(action: {
-                    copyStringToPasteboard(string: "sudo xattr -r -d com.apple.quarantine")
+                    let openURL = showOpenPanel()
+                    if openURL != "failed"
+                    {
+                        runScript("do shell script \"sudo xattr -r -d com.apple.quarantine " + openURL + "\" with administrator privileges")
+                        runScript("display alert \"已修复～快打开一下试一试吧\"")
+                    }
+                    else
+                    {
+                        runScript("display alert \"您没有选择文件\"")
+                    }
                 }) {
                     Text("""
 解决“已损坏”问题
@@ -39,6 +48,25 @@ struct DisableQuarantine: View {
             } //VStack结束
         } //ScrollView结束
     }
+}
+
+func showOpenPanel() -> String {//打开文件函数,返回值为路径
+    let openPanel = NSOpenPanel()
+    openPanel.allowedFileTypes = ["app"]
+    openPanel.allowsMultipleSelection = false
+    openPanel.canChooseDirectories = false
+    openPanel.canChooseFiles = true
+    if (openPanel.runModal() ==  NSApplication.ModalResponse.OK) {
+        let result = openPanel.url // Pathname of the file
+
+        if (result != nil) {
+            return result!.path
+        }
+    }
+    else {
+        return "failed"
+    }
+    return "failed"
 }
 
 struct DisableQuarantine_Previews: PreviewProvider {
