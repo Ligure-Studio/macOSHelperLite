@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 
 struct EnableAllSources: View {
-    
+    @State var isShowAlert:Bool = false
     var body: some View {
         ScrollView {
             VStack {
@@ -27,10 +27,15 @@ struct EnableAllSources: View {
                     .padding(.bottom)
                 Button(action: {
                     runScript("do shell script \"sudo spctl --master-disable\" with administrator privileges")
-                    runScript("display alert \"已打开！\"")
+                    self.isShowAlert.toggle()
                 }) {
                     Text("开启全部来源")
                 }
+                .alert(isPresented: self.$isShowAlert) {
+                            Alert(title: Text("完成！"), message: Text("已开启～"), dismissButton:
+                                        .default(Text("关闭")
+                                                ))
+                        }
                 .buttonStyle(.plain)
                 .font(.title)
                 .padding()

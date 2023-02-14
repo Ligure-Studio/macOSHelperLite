@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DisableQuarantine: View {
+    @State var isShowAlert:Bool = false
     var body: some View {
         ScrollView {
             VStack {
@@ -28,17 +29,19 @@ struct DisableQuarantine: View {
                     if openURL != "failed"
                     {
                         runScript("do shell script \"sudo xattr -r -d com.apple.quarantine " + openURL + "\" with administrator privileges")
-                        runScript("display alert \"已修复～快打开一下试一试吧\"")
-                    }
-                    else
-                    {
-                        runScript("display alert \"您没有选择文件\"")
+                        self.isShowAlert.toggle()
+                        
                     }
                 }) {
                     Text("""
 解决“已损坏”问题
 """)
                 }
+                .alert(isPresented: self.$isShowAlert) {
+                            Alert(title: Text("完成！"), message: Text("已修复～快打开一下试一试吧"), dismissButton:
+                                        .default(Text("关闭")
+                                                ))
+                        }
                 .buttonStyle(.plain)
                 .font(.title)
                 .padding()
