@@ -16,17 +16,17 @@ struct ContactUs: View {
                 .padding()
             HStack {
                 Text("Ver.")
-                Text("Alpha 0.0.01")
+                Text("Beta 0.0.1")
             }
             .font(.system(size: 25).bold())
             HStack {
-                Text("联系开发者")
-                Text("jackchenjiafan@gmail.com")
+                Text("联系开发团队")
+                Text("service@ligure.cn")
             }.font(.system(size: 15))
                 .padding()
             HStack {
                 Text("访问官网")
-                Text("macapp.org.cn")
+                Text("https://ligure.cn")
             }.font(.system(size: 15))
         }
     }
