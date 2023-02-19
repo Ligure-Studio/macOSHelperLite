@@ -76,6 +76,26 @@ extension View {
     }
 }
 
+//更多功能按钮函数结束===
+
+//危险按钮函数===
+
+extension View {
+    public func dangerousButtonStyle() -> some View {
+        self.buttonStyle(.plain)
+            .font(.title)
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [Color(red: 255/255.0, green: 100/255.0, blue: 100/255.0), Color(red: 255/255.0, green: 0/255.0, blue: 0/255.0)]), startPoint: .leading, endPoint: .trailing))
+            .foregroundColor(Color.white)
+            .cornerRadius(15)
+            .padding(10)
+    }
+}
+
+//危险按钮函数结束===
+
+
+
 //剪贴板函数===
 extension View {
     
