@@ -19,7 +19,21 @@
 		4BE1B456299797B70065F275 /* runScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1B455299797B60065F275 /* runScript.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2DD1F90229A373B70042F788 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2DD1F8F529A373B70042F788 /* libEndpointSecurity.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libEndpointSecurity.tbd; path = usr/lib/libEndpointSecurity.tbd; sourceTree = SDKROOT; };
 		4B47DFAB296E863E0051E95B /* OtherFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFeatures.swift; sourceTree = "<group>"; };
 		4B48A5F0296D72160061B5FB /* MacOS-Helper-Lite-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MacOS-Helper-Lite-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4B913C8A296EB54D00DA8605 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
@@ -46,10 +60,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DD1F8EB29A368F80042F788 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				4BC2F1CD296D64DF006E2197 /* ContentView.swift */,
+				4BC2F1DC296D69B0006E2197 /* EnableAllSources.swift */,
+				4BC2F1DE296D6B84006E2197 /* DisableQuarantine.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		2DD1F8EC29A369450042F788 /* OtherFeatures */ = {
+			isa = PBXGroup;
+			children = (
+				4B47DFAB296E863E0051E95B /* OtherFeatures.swift */,
+				4BE1B455299797B60065F275 /* runScript.swift */,
+			);
+			path = OtherFeatures;
+			sourceTree = "<group>";
+		};
+		2DD1F8ED29A369940042F788 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				4B913C8A296EB54D00DA8605 /* ContactUs.swift */,
+				2DD1F8EE29A36A5B0042F788 /* View */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		2DD1F8EE29A36A5B0042F788 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B913C8C296EB9F200DA8605 /* ButtonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DD1F8F429A373B70042F788 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DD1F8F529A373B70042F788 /* libEndpointSecurity.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4BC2F1BF296D64DF006E2197 = {
 			isa = PBXGroup;
 			children = (
 				4BC2F1CA296D64DF006E2197 /* MacOS Helper Lite */,
+				2DD1F8F429A373B70042F788 /* Frameworks */,
 				4BC2F1C9296D64DF006E2197 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,15 +124,11 @@
 		4BC2F1CA296D64DF006E2197 /* MacOS Helper Lite */ = {
 			isa = PBXGroup;
 			children = (
+				2DD1F8EB29A368F80042F788 /* MenuBar */,
+				2DD1F8ED29A369940042F788 /* Contact */,
+				2DD1F8EC29A369450042F788 /* OtherFeatures */,
 				4B48A5F0296D72160061B5FB /* MacOS-Helper-Lite-Info.plist */,
 				4BC2F1CB296D64DF006E2197 /* MacOS_Helper_LiteApp.swift */,
-				4BC2F1CD296D64DF006E2197 /* ContentView.swift */,
-				4B913C8A296EB54D00DA8605 /* ContactUs.swift */,
-				4BC2F1DC296D69B0006E2197 /* EnableAllSources.swift */,
-				4BC2F1DE296D6B84006E2197 /* DisableQuarantine.swift */,
-				4B47DFAB296E863E0051E95B /* OtherFeatures.swift */,
-				4BE1B455299797B60065F275 /* runScript.swift */,
-				4B913C8C296EB9F200DA8605 /* ButtonView.swift */,
 				4BC2F1CF296D64E0006E2197 /* Assets.xcassets */,
 				4BC2F1D4296D64E0006E2197 /* MacOS_Helper_Lite.entitlements */,
 				4BC2F1D1296D64E0006E2197 /* Preview Content */,
@@ -99,6 +154,7 @@
 				4BC2F1C4296D64DF006E2197 /* Sources */,
 				4BC2F1C5296D64DF006E2197 /* Frameworks */,
 				4BC2F1C6296D64DF006E2197 /* Resources */,
+				2DD1F90229A373B70042F788 /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
@@ -289,7 +345,9 @@
 		4BC2F1D8296D64E0006E2197 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "MacOS Helper Lite/MacOS_Helper_Lite.entitlements";
@@ -298,7 +356,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MacOS Helper Lite/Preview Content\"";
-				DEVELOPMENT_TEAM = D93FUPNMM3;
+				DEVELOPMENT_TEAM = 6H36LY2QDZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -322,7 +380,9 @@
 		4BC2F1D9296D64E0006E2197 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "MacOS Helper Lite/MacOS_Helper_Lite.entitlements";
@@ -331,7 +391,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MacOS Helper Lite/Preview Content\"";
-				DEVELOPMENT_TEAM = D93FUPNMM3;
+				DEVELOPMENT_TEAM = 6H36LY2QDZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

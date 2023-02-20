@@ -10,15 +10,19 @@ import SwiftUI
 struct ContactUs: View {
     var body: some View {
         VStack {
-            Text("An Open Source Project By Ligure Studio")
-                .font(.system(size: 40).bold())
-                .gradientForeground(colors: [Color(red: 79/255.0, green: 147/255.0, blue: 248/255.0), Color.blue])
+            let str = "An Open Source Project By Ligure Studio"
+            Text(str)
+                .font(.largeTitle)
+                .font(.system(size: 30).bold())
+                .gradientForeground(colors: [Color(red: 79/255.0,
+                                                   green: 147/255.0,
+                                                   blue: 248/255.0), Color.blue])
                 .padding()
             HStack {
                 Text("Ver.")
                 Text("Beta 0.0.1")
             }
-            .font(.system(size: 25).bold())
+            .font(.system(size: 20).bold())
             HStack {
                 Text("联系开发团队")
                 Text("service@ligure.cn")

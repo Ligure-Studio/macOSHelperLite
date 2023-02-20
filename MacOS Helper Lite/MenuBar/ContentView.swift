@@ -69,7 +69,9 @@ extension View {
         self.buttonStyle(.plain)
             .font(.title)
             .padding()
-            .background(LinearGradient(gradient: Gradient(colors: [Color(red: 79/255.0, green: 147/255.0, blue: 248/255.0), Color(red: 11/255.0, green: 36/255.0, blue: 148/255.0)]), startPoint: .leading, endPoint: .trailing))
+            .background(LinearGradient(gradient: Gradient(colors: [Color(red: 79/255.0, green: 147/255.0, blue: 248/255.0),
+                                                                   Color(red: 11/255.0, green: 36/255.0, blue: 148/255.0)]),
+                                       startPoint: .leading, endPoint: .trailing))
             .foregroundColor(Color.white)
             .cornerRadius(15)
             .padding(10)
@@ -85,7 +87,9 @@ extension View {
         self.buttonStyle(.plain)
             .font(.title)
             .padding()
-            .background(LinearGradient(gradient: Gradient(colors: [Color(red: 255/255.0, green: 100/255.0, blue: 100/255.0), Color(red: 255/255.0, green: 0/255.0, blue: 0/255.0)]), startPoint: .leading, endPoint: .trailing))
+            .background(LinearGradient(gradient: Gradient(colors: [Color(red: 255/255.0, green: 100/255.0, blue: 100/255.0),
+                                                                   Color(red: 255/255.0, green: 0/255.0, blue: 0/255.0)]),
+                                       startPoint: .leading, endPoint: .trailing))
             .foregroundColor(Color.white)
             .cornerRadius(15)
             .padding(10)

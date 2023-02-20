@@ -14,14 +14,16 @@ struct OtherFeatures: View {
         ScrollView(.vertical) {
             VStack {
                 ButtonView(name: "复制homebrew安装命令", copyScript: """
-                                                                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 """)
                 Button(action: {
                     runScript("do shell script \"pwpolicy -clearaccountpolicies\" with administrator privileges")
                 }) {
                     Text("取消四位密码限制")
                 }
+                //增加返回文本
                 .myButtonStyle()
+                
                 Button(action: {
                     self.showDockAlert.toggle()
                 }) {

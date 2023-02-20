@@ -12,6 +12,7 @@ struct MacOS_Helper_LiteApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
         }
     }
 }
