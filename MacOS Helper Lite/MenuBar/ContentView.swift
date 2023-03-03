@@ -14,7 +14,7 @@ struct ContentView: View {
             
             //List开始===
             List{             NavigationLink(destination:EnableAllSources()) {
-                Label("全部来源",systemImage:"macpro.gen3.fill")
+                Label("全部来源",systemImage:"key.fill")
                     .font(.title3)
             }.padding() //"开启全部来源"结束
                 
